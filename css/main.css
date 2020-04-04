@@ -1,0 +1,51 @@
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    margin: auto;
+    max-width: 1364px;
+    text-align: center;
+    background-color: rgb(91, 206, 110);
+}
+
+.navbar {
+    margin: auto;
+    height: 100px;
+    background-color: rgb(138, 88, 23);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar p {
+    float: left;
+    display: block;
+    padding: 0px 25px;
+}
+
+.output {
+    background-color: rgba(146, 107, 120, 0.26);
+    margin: 60px auto auto;
+    height: 220px;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    font-size: 90px;
+}
+
+.controls {
+    background-color: khaki;
+    margin: 50px auto auto;
+    max-width: 500px;
+    padding: 20px 0;
+}
+
+.controls div {
+    background-color: lightcoral;
+    padding: 10px 0;
+    margin: 0 20px;
+}
