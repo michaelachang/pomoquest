@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>PomoQuest | A gamified Pomodoro Timer that helps you focus</title>
-        <meta name="description" content="PomoQuest | A gamified Pomodoro Timer that helps you focus">
+        <title>PomoQuest | A gamified pomodoro timer that helps you focus</title>
+        <meta name="description" content="PomoQuest | A gamified pomodoro timer that helps you focus">
         <meta name="author" content="michaelachang">
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,16 +28,16 @@
                 <div id="timer">25:00</div>
             </div>
             <div class="row controls">
-                <div class="col-md-3">Stop</div>
-                <div class="col-md-3">Play</div>
-                <div class="col-md-3">Skip</div>
+                <button class="col-md-3" id="btn-stop">Stop</button>
+                <button class="col-md-3" id="btn-play">Play</button>
+                <button class="col-md-3" id="btn-skip">Skip</button>
             </div>
         </div>
 
         <!-- Settings Modal -->
         <div class="overlay" id="overlay"></div>
         <div class="settings" id="settings">
-            <button class="close" id="close-btn">x</button>
+            <button class="close" id="btn-close">x</button>
             <h1>Settings</h1>
             <form>
                 <div class="row top-20">
@@ -70,7 +70,7 @@
                 </div>
             </form>
         
-            <a href="https://github.com/michaelachang/pomoquest">What is this?</a>
+            <a href="https://github.com/michaelachang/pomoquest" target="_blank">What is this?</a>
         </div>
         
         <script type="text/javascript" src="js/main.js"></script>
