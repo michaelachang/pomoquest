@@ -6,7 +6,6 @@ body {
     margin: auto;
     max-width: 1364px;
     text-align: center;
-    background-color: rgb(91, 206, 110);
 }
 
 .row {
@@ -18,7 +17,6 @@ body {
 .navbar {
     margin: auto;
     height: 100px;
-    background-color: rgb(138, 88, 23);
     display: flex;
     justify-content: center;
 }
@@ -30,7 +28,7 @@ body {
 }
 
 .output {
-    background-color: rgba(146, 107, 120, 0.26);
+    border: 2px black solid;
     margin: 60px auto auto;
     height: 220px;
     max-width: 800px;
@@ -44,7 +42,6 @@ body {
 }
 
 .controls {
-    background-color: khaki;
     margin: 50px auto auto;
     max-width: 500px;
     padding: 20px 0;
@@ -61,11 +58,12 @@ body {
 
 /* Settings Modal */
 .settings {
+    border: 2px black solid;
+    background-color: white;
     position: absolute;
     pointer-events: none;
     max-width: 700px;
     height: 550px;
-    background-color: rgb(155, 136, 136);
     top: 60px;
     left: 0;
     right: 0;

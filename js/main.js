@@ -12,7 +12,7 @@ var hasPlayed = false;
 var isPlaying = false;
 var t = false;
 
-// Buttons
+// Controls
 const btnStop = document.getElementById('btn-stop');
 const btnPlay = document.getElementById('btn-play');
 const btnSkip = document.getElementById('btn-skip');
