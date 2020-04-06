@@ -17,9 +17,8 @@
                     <p>POMOQUEST</p>
                 </div>
                 <div class="col-md-4">
-                    <p class="btn">Fullscreen</p>
-                    <p class="btn">Info</p>
-                    <p class="btn">Settings</p>
+                    <button class="btn" id="btn-fs">Fullscreen</button>
+                    <button class="btn" id="btn-settings">Settings</button>
                 </div>
             </div>
         </div>
@@ -34,5 +33,46 @@
                 <div class="col-md-3">Skip</div>
             </div>
         </div>
+
+        <!-- Settings Modal -->
+        <div class="overlay" id="overlay"></div>
+        <div class="settings" id="settings">
+            <button class="close" id="close-btn">x</button>
+            <h1>Settings</h1>
+            <form>
+                <div class="row top-20">
+                    <div class="col-md-9 label">
+                        <label for="workInterval">Work Interval</label>
+                        <p>in minutes</p>
+                    </div>
+                    <input type="number" id="workInterval">
+                </div>
+                <div class="row top-20">
+                    <div class="col-md-9 label">
+                        <label for="breakInterval">Break Interval</label>
+                        <p>in minutes</p>
+                    </div>
+                    <input type="number" id="breakInterval">
+                </div>
+                <div class="row top-20">
+                    <div class="col-md-9 label">
+                        <label for="longBreakInterval">Long Break Interval</label>
+                        <p>in minutes</p>
+                    </div>
+                    <input type="number" id="longBreakInterval">
+                </div>
+                <div class="row top-20">
+                    <div class="col-md-9 label">
+                        <label for="longBreakEvery">Long Break Every</label>
+                        <p>in work intervals</p>
+                    </div>
+                    <input type="number" id="longBreakEvery">
+                </div>
+            </form>
+        
+            <a href="https://github.com/michaelachang/pomoquest">What is this?</a>
+        </div>
+        
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

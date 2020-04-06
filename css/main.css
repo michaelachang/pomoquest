@@ -9,6 +9,12 @@ body {
     background-color: rgb(91, 206, 110);
 }
 
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar {
     margin: auto;
     height: 100px;
@@ -48,4 +54,74 @@ body {
     background-color: lightcoral;
     padding: 10px 0;
     margin: 0 20px;
+}
+
+.top-20 {
+    margin-top: 20px;
+}
+
+/* Settings Modal */
+.settings {
+    position: absolute;
+    pointer-events: none;
+    max-width: 700px;
+    height: 550px;
+    background-color: rgb(155, 136, 136);
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.close {
+    float: right;
+}
+
+.settings form {
+    text-align: left;
+    max-width: 400px;
+    height: 300px;
+    margin: 40px auto auto;
+    line-height: 10px;
+}
+
+.label {
+    padding-top: 10px; 
+}
+
+.settings form label {
+    font-size: 20px;
+}
+
+.settings form input {
+    padding: 10px 10px;
+    width: 80px;
+}
+
+.settings a {
+    display: block;
+    margin-top: 50px;
+}
+
+.overlay {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.is-visible {
+    opacity: 1;
+    pointer-events: auto;
 }
