@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>PomoQuest | A gamified pomodoro timer that helps you focus</title>
-        <meta name="description" content="PomoQuest | A gamified pomodoro timer that helps you focus">
-        <meta name="author" content="michaelachang">
-        
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
 
-    <body>
-        <div class="navbar">
-            <div class="row container">
-                <div class="col-md-8">
-                    <p>POMOQUEST</p>
-                </div>
-                <div class="col-md-4">
-                    <button class="btn" id="btn-fs">Fullscreen</button>
-                    <button class="btn" id="btn-settings">Settings</button>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <title>PomoQuest | A gamified pomodoro timer that helps you focus</title>
+    <meta name="description" content="PomoQuest | A gamified pomodoro timer that helps you focus">
+    <meta name="author" content="michaelachang">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="row container">
+            <div class="col-md-8">
+                <p>POMOQUEST</p>
+            </div>
+            <div class="col-md-4">
+                <button class="btn" id="btn-fs">Fullscreen</button>
+                <a href="#" class="btn">Info</a>
+                <button class="btn" id="btn-settings">Settings</button>
             </div>
         </div>
+    </div>
 
-        <div class="container">
-            <div class="output">
-                <div id="timer">25:00</div>
-            </div>
-            <div class="row controls">
-                <button class="col-md-3" id="btn-stop">Stop</button>
-                <button class="col-md-3" id="btn-play">Play</button>
-                <button class="col-md-3" id="btn-skip">Skip</button>
-            </div>
+    <div class="container">
+        <div class="output">
+            <div id="timer">25:00</div>
         </div>
+        <div class="row controls">
+            <button class="col-md-3" id="btn-stop">Stop</button>
+            <button class="col-md-3" id="btn-play">Play</button>
+            <button class="col-md-3" id="btn-skip">Skip</button>
+        </div>
+    </div>
 
-        <!-- Settings Modal -->
-        <div class="overlay" id="overlay"></div>
-        <div class="settings" id="settings">
-            <button class="close" id="btn-close">x</button>
-            <h1>Settings</h1>
-            <form>
-                <div class="row top-20">
-                    <div class="col-md-9 label">
-                        <label for="workInterval">Work Interval</label>
-                        <p>in minutes</p>
-                    </div>
-                    <input type="number" id="workInterval">
+    <!-- Settings Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="settings" id="settings">
+        <button class="close" id="btn-close">x</button>
+        <h1>Settings</h1>
+        <form>
+            <div class="row top-20">
+                <div class="col-md-9 label">
+                    <label for="workInterval">Work Interval</label>
+                    <p>in minutes</p>
                 </div>
-                <div class="row top-20">
-                    <div class="col-md-9 label">
-                        <label for="breakInterval">Break Interval</label>
-                        <p>in minutes</p>
-                    </div>
-                    <input type="number" id="breakInterval">
+                <input type="number" id="workInterval">
+            </div>
+            <div class="row top-20">
+                <div class="col-md-9 label">
+                    <label for="breakInterval">Break Interval</label>
+                    <p>in minutes</p>
                 </div>
-                <div class="row top-20">
-                    <div class="col-md-9 label">
-                        <label for="longBreakInterval">Long Break Interval</label>
-                        <p>in minutes</p>
-                    </div>
-                    <input type="number" id="longBreakInterval">
+                <input type="number" id="breakInterval">
+            </div>
+            <div class="row top-20">
+                <div class="col-md-9 label">
+                    <label for="longBreakInterval">Long Break Interval</label>
+                    <p>in minutes</p>
                 </div>
-                <div class="row top-20">
-                    <div class="col-md-9 label">
-                        <label for="longBreakEvery">Long Break Every</label>
-                        <p>in work intervals</p>
-                    </div>
-                    <input type="number" id="longBreakEvery">
+                <input type="number" id="longBreakInterval">
+            </div>
+            <div class="row top-20">
+                <div class="col-md-9 label">
+                    <label for="longBreakEvery">Long Break Every</label>
+                    <p>in work intervals</p>
                 </div>
-            </form>
-        
-            <a href="https://github.com/michaelachang/pomoquest" target="_blank">What is this?</a>
-        </div>
-        
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+                <input type="number" id="longBreakEvery">
+            </div>
+        </form>
+
+        <a href="https://github.com/michaelachang/pomoquest" target="_blank">What is this?</a>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>

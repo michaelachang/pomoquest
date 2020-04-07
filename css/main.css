@@ -1,32 +1,27 @@
 body {
     overflow-x: hidden;
 }
-
 .container {
     margin: auto;
     max-width: 1364px;
     text-align: center;
 }
-
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .navbar {
     margin: auto;
     height: 100px;
     display: flex;
     justify-content: center;
 }
-
 .navbar p {
     float: left;
     display: block;
     padding: 0px 25px;
 }
-
 .output {
     border: 2px black solid;
     margin: 60px auto auto;
@@ -36,27 +31,25 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 #timer {
     font-size: 90px;
 }
-
 .controls {
     margin: 50px auto auto;
     max-width: 500px;
     padding: 20px 0;
 }
-
-.controls button {
+.controls button,
+a {
     padding: 10px 0;
     margin: 0 20px;
 }
-
 .top-20 {
     margin-top: 20px;
 }
 
 /* Settings Modal */
+
 .settings {
     border: 2px black solid;
     background-color: white;
@@ -73,11 +66,9 @@ body {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .close {
     float: right;
 }
-
 .settings form {
     text-align: left;
     max-width: 400px;
@@ -85,25 +76,20 @@ body {
     margin: 40px auto auto;
     line-height: 10px;
 }
-
 .label {
-    padding-top: 10px; 
+    padding-top: 10px;
 }
-
 .settings form label {
     font-size: 20px;
 }
-
 .settings form input {
     padding: 10px 10px;
     width: 80px;
 }
-
 .settings a {
     display: block;
     margin-top: 50px;
 }
-
 .overlay {
     pointer-events: none;
     opacity: 0;
@@ -117,7 +103,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
-
 .is-visible {
     opacity: 1;
     pointer-events: auto;
