@@ -63,10 +63,16 @@ longBreakInterval.addEventListener('input', function () {
 function togglePlay() {
     if (!hasPlayed) {
         hasPlayed = true;
-        switch(intervalType) {
-            case 'work': workInterval.disabled = true; break;
-            case 'break': breakInterval.disabled = true; break;
-            case 'longBreak': longBreakInterval.disabled = true; break;
+        switch (intervalType) {
+            case 'work':
+                workInterval.disabled = true;
+                break;
+            case 'break':
+                breakInterval.disabled = true;
+                break;
+            case 'longBreak':
+                longBreakInterval.disabled = true;
+                break;
         }
     }
 
@@ -88,8 +94,10 @@ function playTimer() {
         if (timer == 0) {
             clearInterval(t);
             t = false;
+            cycleCounter++;
+            setTimer();
         }
-    }, 50);
+    }, 1000);
 }
 
 function pauseTimer() {
