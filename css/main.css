@@ -1,6 +1,10 @@
-body {
+html, body {
+    margin: 0;
+    height: 100%;
     overflow-x: hidden;
-    background: white url("/img/splash.jpg") fixed center top;
+}
+body {
+    background: url("/img/splash.jpg") fixed center top;
 }
 .container {
     margin: auto;
@@ -13,7 +17,8 @@ body {
     align-items: center;
 }
 .navbar {
-    background: margin: auto;
+    background: none;
+    margin: auto;
     height: 100px;
     display: flex;
     justify-content: center;
