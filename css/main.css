@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    background: white url("/img/splash.jpg") fixed center top;
 }
 .container {
     margin: auto;
@@ -12,7 +13,7 @@ body {
     align-items: center;
 }
 .navbar {
-    margin: auto;
+    background: margin: auto;
     height: 100px;
     display: flex;
     justify-content: center;
