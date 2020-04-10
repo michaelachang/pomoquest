@@ -13,7 +13,7 @@ var isPlaying = false;
 var t = false;
 
 // Controls
-const btnStop = document.getElementById('btn-stop');
+const btnReset = document.getElementById('btn-reset');
 const btnPlay = document.getElementById('btn-play');
 const btnSkip = document.getElementById('btn-skip');
 
@@ -23,7 +23,7 @@ btnPlay.addEventListener('click', function () {
     togglePlay();
 });
 
-btnStop.addEventListener('click', function () {
+btnReset.addEventListener('click', function () {
     reset();
     updateTimer();
 });
