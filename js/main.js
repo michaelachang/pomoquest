@@ -226,6 +226,7 @@ const btnOpen = document.getElementById('btn-settings');
 const btnClose = document.getElementById('btn-close');
 const overlay = document.getElementById('overlay');
 const modal = document.getElementById('settings');
+const content = document.getElementById('content');
 
 // prevents modal transition at beginning
 transition = setTimeout(function () {
@@ -236,12 +237,18 @@ transition = setTimeout(function () {
 btnOpen.addEventListener('click', function () {
     overlay.classList.add('is-visible');
     modal.classList.add('is-visible');
+    content.classList.add('blur');
+
 });
 btnClose.addEventListener('click', function () {
     overlay.classList.remove('is-visible');
     modal.classList.remove('is-visible');
+    content.classList.remove('blur');
+
 });
 overlay.addEventListener('click', function () {
     overlay.classList.remove('is-visible');
     modal.classList.remove('is-visible');
+    content.classList.remove('blur');
+
 });
