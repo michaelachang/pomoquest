@@ -16,12 +16,16 @@ body {
     color: white;
     font-size: 30px;
 }
+.nav-btn {
+    float: right;
+}
 .btn {
     transform: scale(1);
+    float: left;
+    display: block;
     width: 50px;
     height: 50px;
-    margin: 0 10px;
-    color: white;
+    margin-right: 10px;
     border: none;
     background: none;
 
@@ -39,9 +43,20 @@ body {
 .btn:active {
     transform: scale(1);
 }
-.btn a {
-    color: white;
-    text-decoration: none;
+.nav-btn.btn:last-child {
+    margin-right: 0;
+}
+#btn-fs {
+    background-image: url("/img/fullscreen-opn.png");
+    background-size: 50px;
+}
+#btn-info {
+    background-image: url("/img/info.png");
+    background-size: 50px;
+}
+#btn-settings {
+    background-image: url("/img/settings.png");
+    background-size: 50px;
 }
 .row {
     display: flex;
@@ -49,6 +64,7 @@ body {
     align-items: center;
 }
 .navbar {
+    max-width: 1364px;
     background: none;
     margin: auto;
     height: 100px;

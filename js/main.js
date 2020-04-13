@@ -78,10 +78,12 @@ function togglePlay() {
 
     if (isPlaying) {
         isPlaying = false;
+        btnPlay.textContent = "Play"
         pauseTimer();
 
     } else {
         isPlaying = true;
+        btnPlay.textContent = "Pause"
         playTimer();
     }
 }
@@ -151,17 +153,73 @@ function reset() {
 
 // Fullscreen
 const doc = document.documentElement;
-document.getElementById('btn-fs').addEventListener('click', function () {
-    if (doc.requestFullscreen) {
-        doc.requestFullscreen();
-    } else if (doc.mozRequestFullScreen) { /* Firefox */
-        doc.mozRequestFullScreen();
-    } else if (doc.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-        doc.webkitRequestFullscreen();
-    } else if (doc.msRequestFullscreen) { /* IE/Edge */
-        doc.msRequestFullscreen();
+var isFs = (document.innerHTML = document.fullscreen);
+btnFs = document.getElementById('btn-fs')
+
+btnFs.addEventListener('click', function () {
+    if (isFs) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        }
+        else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
+        else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    } else {
+        if (doc.requestFullscreen) {
+            doc.requestFullscreen();
+        } else if (doc.mozRequestFullScreen) { /* Firefox */
+            doc.mozRequestFullScreen();
+        } else if (doc.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            doc.webkitRequestFullscreen();
+        } else if (doc.msRequestFullscreen) { /* IE/Edge */
+            doc.msRequestFullscreen();
+        }
     }
 });
+
+// Detect fullscreen change
+document.addEventListener("fullscreenchange", function () {
+    if (document.innerHTML = document.fullscreen) { 
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+        isFs = true;
+    } else {
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        isFs = false;
+    }
+}, false);
+document.addEventListener("mozfullscreenchange", function () {
+    if (fullscreenState.innerHTML = document.mozFullscreen) { 
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+        isFs = true;
+    } else {
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        isFs = false;
+    }
+}, false);
+document.addEventListener("webkitfullscreenchange", function () {
+    if (fullscreenState.innerHTML = document.webkitIsFullscreen) { 
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+        isFs = true;
+    } else {
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        isFs = false;
+    }
+}, false);
+document.addEventListener("msfullscreenchange", function () {
+    if (fullscreenState.innerHTML = document.msFullscreenElement) { 
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+        isFs = true;
+    } else {
+        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        isFs = false;
+    }
+}, false);
 
 // Settings Modal
 const btnOpen = document.getElementById('btn-settings');
@@ -170,7 +228,7 @@ const overlay = document.getElementById('overlay');
 const modal = document.getElementById('settings');
 
 // prevents modal transition at beginning
-transition = setTimeout(function() {
+transition = setTimeout(function () {
     modal.setAttribute("style", "transition: opacity 0.3s;");
     overlay.setAttribute("style", "transition: opacity 0.3s;");
 }, 1000)
