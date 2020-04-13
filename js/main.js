@@ -169,6 +169,12 @@ const btnClose = document.getElementById('btn-close');
 const overlay = document.getElementById('overlay');
 const modal = document.getElementById('settings');
 
+// prevents modal transition at beginning
+transition = setTimeout(function() {
+    modal.setAttribute("style", "transition: opacity 0.3s;");
+    overlay.setAttribute("style", "transition: opacity 0.3s;");
+}, 1000)
+
 btnOpen.addEventListener('click', function () {
     overlay.classList.add('is-visible');
     modal.classList.add('is-visible');

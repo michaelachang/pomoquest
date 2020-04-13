@@ -17,15 +17,27 @@ body {
     font-size: 30px;
 }
 .btn {
+    transform: scale(1);
     width: 50px;
     height: 50px;
+    margin: 0 10px;
     color: white;
     border: none;
     background: none;
-    transition-duration: 0.3s;
+
+    /* -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"; */
 }
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+.btn:active {
+    transform: scale(0.95);
+}
+.btn:active {
+    transform: scale(1);
 }
 .btn a {
     color: white;
@@ -90,7 +102,6 @@ a {
     padding: 10px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.3s;
 }
 .close {
     float: right;
@@ -119,7 +130,6 @@ a {
 .overlay {
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s;
     position: fixed;
     top: 0;
     left: 0;
