@@ -76,6 +76,7 @@ function togglePlay() {
         }
     }
 
+    // TODO: background image disappears on click
     if (isPlaying) {
         isPlaying = false;
         btnPlay.style.backgroundImage = "url('../img/play.png')";
