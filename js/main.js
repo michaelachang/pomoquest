@@ -78,12 +78,12 @@ function togglePlay() {
 
     if (isPlaying) {
         isPlaying = false;
-        btnPlay.textContent = "Play"
+        btnPlay.setAttribute("style", "background-image: url('/img/play.png');")
         pauseTimer();
 
     } else {
         isPlaying = true;
-        btnPlay.textContent = "Pause"
+        btnPlay.setAttribute("style", "background-image: url('/img/pause.png');")
         playTimer();
     }
 }

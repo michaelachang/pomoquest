@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 
 html,
 body {
+    color: black;
     margin: 0;
     height: 100%;
     overflow-x: hidden;
@@ -28,7 +29,7 @@ body {
 }
 
 .logo {
-    width: 200px;
+    width: 175px;
     pointer-events: none;
 }
 
@@ -50,6 +51,10 @@ body {
     filter: url(#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"; */
+}
+
+button:focus {
+    outline: none;
 }
 
 button:hover {
@@ -90,7 +95,7 @@ button:after {
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.4);
+    background-size: auto 100%;
     margin: auto;
     height: 90px;
     display: flex;
@@ -104,8 +109,12 @@ button:after {
 }
 
 .output {
-    border: 2px black solid;
-    margin: 60px auto auto;
+    border-radius: 100px;
+    border: solid 15px rgba(54, 54, 54, 0.8);
+    background: rgba(119, 91, 50, 0.3);
+    color: rgb(255, 242, 208);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 80px auto auto;
     height: 220px;
     max-width: 800px;
     display: flex;
@@ -115,18 +124,36 @@ button:after {
 
 #timer {
     font-size: 90px;
+    font-family: 'Cinzel', serif;
 }
 
 .controls {
-    margin: 50px auto auto;
+    margin: 30px auto auto;
     max-width: 500px;
     padding: 20px 0;
 }
 
-.controls button,
-a {
-    padding: 10px 0;
-    margin: 0 20px;
+.controls button {
+    margin: 0 10px;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 0;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    background-size: contain;
+}
+
+#btn-reset {
+    background-image: url("/img/reset.png");
+}
+
+#btn-play {
+    background-image: url("/img/play.png");
+}
+
+#btn-skip {
+    background-image: url("/img/skip.png");
 }
 
 .top-20 {
@@ -137,6 +164,7 @@ a {
 
 .settings {
     background: url("/img/modal-bg.png");
+    background-color: transparent;
     background-size: contain;
     position: absolute;
     pointer-events: none;
@@ -165,6 +193,7 @@ a {
 .settings h1 {
     margin: 50px 0px 0px 80px;
 }
+
 .settings form {
     text-align: left;
     max-width: 400px;
@@ -182,6 +211,7 @@ a {
 }
 
 .settings form input {
+    margin-top: -15px;
     padding: 10px 10px;
     width: 80px;
     border: none;
