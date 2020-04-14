@@ -79,12 +79,12 @@ function togglePlay() {
     // TODO: background image disappears on click
     if (isPlaying) {
         isPlaying = false;
-        btnPlay.style.backgroundImage = "url('../img/play.png')";
+        btnPlay.classList.remove('pause');
         pauseTimer();
 
     } else {
         isPlaying = true;
-        btnPlay.style.backgroundImage = "url('../img/pause.png')";
+        btnPlay.classList.add('pause');
         playTimer();
     }
 }

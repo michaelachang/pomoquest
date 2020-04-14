@@ -152,6 +152,10 @@ button:after {
     background-image: url(../img/play.png);
 }
 
+.pause {
+    background-image: url(../img/pause.png) !important;
+}
+
 #btn-skip {
     background-image: url(../img/skip.png);
 }
