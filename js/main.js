@@ -76,7 +76,6 @@ function togglePlay() {
         }
     }
 
-    // TODO: background image disappears on click
     if (isPlaying) {
         isPlaying = false;
         btnPlay.classList.remove('pause');
@@ -187,37 +186,37 @@ btnFs.addEventListener('click', function () {
 // Detect fullscreen change
 document.addEventListener("fullscreenchange", function () {
     if (document.innerHTML = document.fullscreen) {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
+        btnFs.classList.add('fs-close');
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
+        btnFs.classList.remove('fs-close');
         isFs = false;
     }
 }, false);
 document.addEventListener("mozfullscreenchange", function () {
     if (fullscreenState.innerHTML = document.mozFullscreen) {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
+        btnFs.classList.add('fs-close');
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
+        btnFs.classList.remove('fs-close');
         isFs = false;
     }
 }, false);
 document.addEventListener("webkitfullscreenchange", function () {
     if (fullscreenState.innerHTML = document.webkitIsFullscreen) {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
+        btnFs.classList.add('fs-close');
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
+        btnFs.classList.remove('fs-close');
         isFs = false;
     }
 }, false);
 document.addEventListener("msfullscreenchange", function () {
     if (fullscreenState.innerHTML = document.msFullscreenElement) {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
+        btnFs.classList.add('fs-close');
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
+        btnFs.classList.remove('fs-close');
         isFs = false;
     }
 }, false);

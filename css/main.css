@@ -73,6 +73,10 @@ button:after {
     margin-right: 0;
 }
 
+.fs-close {
+    background-image: url(../img/fullscreen-cl.png.png) !important;
+}
+
 #btn-fs {
     background-image: url(../img/fullscreen-opn.png);
     background-size: 50px;
