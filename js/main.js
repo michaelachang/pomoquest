@@ -16,6 +16,7 @@ var t = false;
 const btnReset = document.getElementById('btn-reset');
 const btnPlay = document.getElementById('btn-play');
 const btnSkip = document.getElementById('btn-skip');
+const interval = document.getElementById('interval');
 
 reset();
 
@@ -113,12 +114,15 @@ function setTimer() {
     if (cycleCounter % (longBreakEvery.value * 2) == 0) {
         timer = longBreakInterval.value * 60;
         intervalType = 'longBreak'
+        interval.textContent = "Long Break";
     } else if (cycleCounter % 2 == 0) {
         timer = breakInterval.value * 60;
         intervalType = 'break';
+        interval.textContent = "Break";
     } else {
         timer = workInterval.value * 60;
         intervalType = 'work';
+        interval.textContent = "Work";
     }
     updateTimer();
 }
@@ -143,6 +147,7 @@ function reset() {
     isPlaying = false;
     cycleCounter = 1;
     intervalType = 'work';
+    interval.textContent = "Work";
 
     workInterval.value = 25;
     breakInterval.value = 5;
