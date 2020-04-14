@@ -10,7 +10,7 @@ body {
 }
 
 #content {
-    background: url("img/splash.jpg") center top;
+    background: url(../img/splash.jpg) center top;
     height: 100%;
     width: 100%;
     transition: ease-in 0.1s;
