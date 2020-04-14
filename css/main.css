@@ -74,17 +74,17 @@ button:after {
 }
 
 #btn-fs {
-    background-image: url("/img/fullscreen-opn.png");
+    background-image: url(../img/fullscreen-opn.png);
     background-size: 50px;
 }
 
 #btn-info {
-    background-image: url("/img/info.png");
+    background-image: url(../img/info.png);
     background-size: 50px;
 }
 
 #btn-settings {
-    background-image: url("/img/settings.png");
+    background-image: url(../img/settings.png);
     background-size: 50px;
 }
 
@@ -145,15 +145,15 @@ button:after {
 }
 
 #btn-reset {
-    background-image: url("/img/reset.png");
+    background-image: url(../img/reset.png);
 }
 
 #btn-play {
-    background-image: url("/img/play.png");
+    background-image: url(../img/play.png);
 }
 
 #btn-skip {
-    background-image: url("/img/skip.png");
+    background-image: url(../img/skip.png);
 }
 
 .top-20 {
@@ -163,7 +163,7 @@ button:after {
 /* Settings Modal */
 
 .settings {
-    background: url("/img/modal-bg.png");
+    background: url(../img/modal-bg.png);
     background-color: transparent;
     background-size: contain;
     position: absolute;
@@ -181,7 +181,7 @@ button:after {
 
 .close {
     background-color: transparent;
-    background: url("/img/close.png");
+    background: url(../img/close.png);
     background-size: contain;
     border: none;
     margin-right: 0;

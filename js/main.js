@@ -78,12 +78,12 @@ function togglePlay() {
 
     if (isPlaying) {
         isPlaying = false;
-        btnPlay.setAttribute("style", "background-image: url('/img/play.png');")
+        btnPlay.setAttribute("style", "background-image: url(../img/play.png);")
         pauseTimer();
 
     } else {
         isPlaying = true;
-        btnPlay.setAttribute("style", "background-image: url('/img/pause.png');")
+        btnPlay.setAttribute("style", "background-image: url(../img/pause.png);")
         playTimer();
     }
 }
@@ -160,24 +160,24 @@ btnFs.addEventListener('click', function () {
     if (isFs) {
         if (document.exitFullscreen) {
             document.exitFullscreen();
-        }
-        else if (document.mozCancelFullScreen) {
+        } else if (document.mozCancelFullScreen) {
             document.mozCancelFullScreen();
-        }
-        else if (document.webkitCancelFullScreen) {
+        } else if (document.webkitCancelFullScreen) {
             document.webkitCancelFullScreen();
-        }
-        else if (document.msExitFullscreen) {
+        } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
     } else {
         if (doc.requestFullscreen) {
             doc.requestFullscreen();
-        } else if (doc.mozRequestFullScreen) { /* Firefox */
+        } else if (doc.mozRequestFullScreen) {
+            /* Firefox */
             doc.mozRequestFullScreen();
-        } else if (doc.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        } else if (doc.webkitRequestFullscreen) {
+            /* Chrome, Safari and Opera */
             doc.webkitRequestFullscreen();
-        } else if (doc.msRequestFullscreen) { /* IE/Edge */
+        } else if (doc.msRequestFullscreen) {
+            /* IE/Edge */
             doc.msRequestFullscreen();
         }
     }
@@ -185,38 +185,38 @@ btnFs.addEventListener('click', function () {
 
 // Detect fullscreen change
 document.addEventListener("fullscreenchange", function () {
-    if (document.innerHTML = document.fullscreen) { 
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+    if (document.innerHTML = document.fullscreen) {
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
         isFs = false;
     }
 }, false);
 document.addEventListener("mozfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.mozFullscreen) { 
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+    if (fullscreenState.innerHTML = document.mozFullscreen) {
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
         isFs = false;
     }
 }, false);
 document.addEventListener("webkitfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.webkitIsFullscreen) { 
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+    if (fullscreenState.innerHTML = document.webkitIsFullscreen) {
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
         isFs = false;
     }
 }, false);
 document.addEventListener("msfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.msFullscreenElement) { 
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-cl.png');");
+    if (fullscreenState.innerHTML = document.msFullscreenElement) {
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-cl.png);");
         isFs = true;
     } else {
-        btnFs.setAttribute("style", "background-image: url('/img/fullscreen-opn.png');");
+        btnFs.setAttribute("style", "background-image: url(../img/fullscreen-opn.png);");
         isFs = false;
     }
 }, false);
