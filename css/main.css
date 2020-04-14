@@ -1,31 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
 html,
 body {
     margin: 0;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
-body {
-    background: url("/img/splash.jpg") fixed center top;
+
+#content {
+    background: url("/img/splash.jpg") center top;
+    height: 100%;
+    width: 100%;
+    transition: ease-in 0.1s;
 }
+
+.blur {
+    transform: scale(1.002);
+    filter: blur(1px);
+    transition: ease-out 1s;
+}
+
 .container {
     margin: auto;
     max-width: 1364px;
-    text-align: center;
+    text-align: left;
 }
+
 .logo {
-    color: white;
-    font-size: 30px;
+    width: 200px;
+    pointer-events: none;
 }
+
 .nav-btn {
     float: right;
 }
+
 .btn {
     transform: scale(1);
     float: left;
     display: block;
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 5px;
     border: none;
     background: none;
 
@@ -34,48 +51,58 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"; */
 }
-.btn:hover {
-    transform: scale(1.05);
+
+button:hover {
+    transform: scale(1.03);
 }
-.btn:active {
-    transform: scale(0.95);
+
+button:active {
+    transform: scale(0.98);
 }
-.btn:active {
+
+button:after {
     transform: scale(1);
 }
+
 .nav-btn.btn:last-child {
     margin-right: 0;
 }
+
 #btn-fs {
     background-image: url("/img/fullscreen-opn.png");
     background-size: 50px;
 }
+
 #btn-info {
     background-image: url("/img/info.png");
     background-size: 50px;
 }
+
 #btn-settings {
     background-image: url("/img/settings.png");
     background-size: 50px;
 }
+
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .navbar {
-    max-width: 1364px;
-    background: none;
+    background: rgba(0, 0, 0, 0.4);
     margin: auto;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: center;
 }
+
 .navbar p {
     float: left;
     display: block;
     padding: 0px 25px;
 }
+
 .output {
     border: 2px black solid;
     margin: 60px auto auto;
@@ -85,19 +112,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #timer {
     font-size: 90px;
 }
+
 .controls {
     margin: 50px auto auto;
     max-width: 500px;
     padding: 20px 0;
 }
+
 .controls button,
 a {
     padding: 10px 0;
     margin: 0 20px;
 }
+
 .top-20 {
     margin-top: 20px;
 }
@@ -105,8 +136,8 @@ a {
 /* Settings Modal */
 
 .settings {
-    border: 2px black solid;
-    background-color: white;
+    background: url("/img/modal-bg.png");
+    background-size: contain;
     position: absolute;
     pointer-events: none;
     max-width: 700px;
@@ -119,30 +150,49 @@ a {
     text-align: center;
     opacity: 0;
 }
+
 .close {
+    background-color: transparent;
+    background: url("/img/close.png");
+    background-size: contain;
+    border: none;
+    margin-right: 0;
+    width: 70px;
+    height: 70px;
     float: right;
+}
+
+.settings h1 {
+    margin: 50px 0px 0px 80px;
 }
 .settings form {
     text-align: left;
     max-width: 400px;
     height: 300px;
-    margin: 40px auto auto;
+    margin: 20px auto auto;
     line-height: 10px;
 }
+
 .label {
     padding-top: 10px;
 }
+
 .settings form label {
     font-size: 20px;
 }
+
 .settings form input {
     padding: 10px 10px;
     width: 80px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+
 .settings a {
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
 }
+
 .overlay {
     pointer-events: none;
     opacity: 0;
@@ -155,6 +205,7 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
 .is-visible {
     opacity: 1;
     pointer-events: auto;
