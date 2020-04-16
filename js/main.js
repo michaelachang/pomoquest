@@ -199,7 +199,7 @@ document.addEventListener("fullscreenchange", function () {
     }
 }, false);
 document.addEventListener("mozfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.mozFullscreen) {
+    if (document.innerHTML = document.mozFullscreen) {
         btnFs.classList.add('fs-close');
         isFs = true;
     } else {
@@ -208,7 +208,7 @@ document.addEventListener("mozfullscreenchange", function () {
     }
 }, false);
 document.addEventListener("webkitfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.webkitIsFullscreen) {
+    if (document.innerHTML = document.webkitIsFullscreen) {
         btnFs.classList.add('fs-close');
         isFs = true;
     } else {
@@ -217,7 +217,7 @@ document.addEventListener("webkitfullscreenchange", function () {
     }
 }, false);
 document.addEventListener("msfullscreenchange", function () {
-    if (fullscreenState.innerHTML = document.msFullscreenElement) {
+    if (document.innerHTML = document.msFullscreenElement) {
         btnFs.classList.add('fs-close');
         isFs = true;
     } else {
